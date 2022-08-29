@@ -280,7 +280,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "DepthNormals",
     "m_DefaultReferenceName": "_DepthNormals",
-    "m_OverrideReferenceName": "_DepthNormalsTexture",
+    "m_OverrideReferenceName": "_CameraDepthNormalsTexture",
     "m_GeneratePropertyBlock": false,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
