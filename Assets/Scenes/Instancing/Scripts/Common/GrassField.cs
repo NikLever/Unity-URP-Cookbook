@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 namespace GPUInstancedGrass.Common {
 	public class GrassField : MonoBehaviour {
-		public static int GrassDensity = 150;
+		public static int GrassDensity = 250;
 		private static bool _performCulling;
 		private static event Action UpdateCulling;
 
