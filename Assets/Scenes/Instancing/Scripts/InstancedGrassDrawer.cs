@@ -19,6 +19,7 @@ namespace GPUInstancedGrass {
 		private List<Vector2> _positions;
 		private int _positionsCount;
 		private Vector2[,] _grassEntities;
+		private RenderParams _renderParams;
 
 		/*private GridCell _bottomLeftCameraCell;
 	private GridCell _topRightCameraCell;*/
@@ -27,6 +28,9 @@ namespace GPUInstancedGrass {
 			_grassEntities = grassEntities;
 			_grassBounds = new Bounds(transform.position, new Vector3(fieldSize.x, 0.0f, fieldSize.y));
 			_positions = new List<Vector2>();
+			_renderParams = new RenderParams(_instanceMaterial);
+			_renderParams.worldBounds = _grassBounds;
+			_renderParams.shadowCastingMode = ShadowCastingMode.Off;
 		}
 		
 		public override void UpdatePositions(Vector2Int bottomLeftCameraCell, Vector2Int topRightCameraCell) {
@@ -47,9 +51,7 @@ namespace GPUInstancedGrass {
 
 		private void Update() {
 			if (_positionsCount == 0) return;
-			Graphics.DrawMeshInstancedProcedural(_instanceMesh, 0, _instanceMaterial,
-				_grassBounds, _positionsCount,
-				null, ShadowCastingMode.Off, false);
+			Graphics.RenderMeshPrimitives(_renderParams, _instanceMesh, 0, _positionsCount);
 		}
 
 		private void OnDestroy() {
