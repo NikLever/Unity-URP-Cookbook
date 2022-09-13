@@ -26,7 +26,7 @@ public class AddDecal : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.LogFormat("Pos:{0} Normal:{1}", hit.point, hit.normal);
+                //Debug.LogFormat("Pos:{0} Normal:{1}", hit.point, hit.normal);
                 AddDecalProjector(hit.point, hit.normal);
             }
         }
@@ -35,10 +35,10 @@ public class AddDecal : MonoBehaviour
     void AddDecalProjector(Vector3 pos, Vector3 normal)
     {
         GameObject decalProjectorObject = Instantiate(decalProjectorPrefab);
-        DecalProjector decalProjectorComponent = decalProjectorObject.GetComponent<DecalProjector>();
 
-        // Creates a new material instance for the DecalProjector.
-        decalProjectorComponent.material = new Material(decalProjectorComponent.material);
+        // Creates a new material instance for the DecalProjector if you want indivdual Decal control over the material
+        //DecalProjector decalProjectorComponent = decalProjectorObject.GetComponent<DecalProjector>();
+        //decalProjectorComponent.material = new Material(decalProjectorComponent.material);
 
         //Move away from surface
         pos += normal * 0.5f;
