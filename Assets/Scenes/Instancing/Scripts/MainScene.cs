@@ -9,7 +9,7 @@ namespace GPUInstancedGrass {
 		private TextMeshProUGUI _counter;
 
 		private void Awake() {
-			Application.targetFrameRate = 60;
+            Application.targetFrameRate = 60;
 			UpdateCounter();
 		}
 		
