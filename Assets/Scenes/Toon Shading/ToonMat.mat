@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 6
+  version: 7
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -123,9 +123,9 @@ Material:
     - _LightProbeContribution: 3.5
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _OutlineDepthSensitivity: 0.849
-    - _OutlineNormalsSensitivity: 0.5
-    - _OutlineThickness: 0.01
+    - _OutlineDepthSensitivity: 0.437
+    - _OutlineNormalsSensitivity: 0.758
+    - _OutlineThickness: 5.13
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
