@@ -1,6 +1,9 @@
 ﻿//Based on code from DMEville https://www.youtube.com/watch?v=0G8CVQZhMXw
 
-void raymarch_float( float3 rayOrigin, float3 rayDirection, int numSteps, float stepSize, float densityScale, sampler3D Volume, float3 offset, int numLightSteps, float lightStepSize, float3 lightDir, float lightAbsorb, float darknessThreshold, float transmittance, out float3 result )
+void raymarch_float( float3 rayOrigin, float3 rayDirection, float numSteps, float stepSize,
+                     float densityScale, UnityTexture3D Volume, float3 offset, float numLightSteps,
+                     float lightStepSize, float3 lightDir, float lightAbsorb, float darknessThreshold,
+                     float transmittance, out float3 result )
 {
 	float density = 0;
 	float transmission = 0;
