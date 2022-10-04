@@ -10,8 +10,7 @@ void raymarch_float( float3 rayOrigin, float3 rayDirection, float numSteps, floa
 	float lightAccumulation = 0;
 	float finalLight = 0;
 
-    //offset -= SHADERGRAPH_OBJECT_POSITION;
-
+    
 	for(int i =0; i< numSteps; i++){
 		rayOrigin += (rayDirection*stepSize);
 					
