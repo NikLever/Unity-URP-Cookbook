@@ -10,7 +10,7 @@ void raymarch_float( float3 rayOrigin, float3 rayDirection, float numSteps, floa
 	float lightAccumulation = 0;
 	float finalLight = 0;
 
-    offset -= SHADERGRAPH_OBJECT_POSITION;
+    //offset -= SHADERGRAPH_OBJECT_POSITION;
 
 	for(int i =0; i< numSteps; i++){
 		rayOrigin += (rayDirection*stepSize);
@@ -51,12 +51,12 @@ void raymarchv1_float( float3 rayOrigin, float3 rayDirection, float numSteps, fl
 		float sphereDist = distance(rayOrigin, Sphere.xyz);
 
 		if(sphereDist < Sphere.w){
-			density += 0.1 * densityScale;
+			density += 0.1;
         }
 					
 	}
 
-	result = density;
+	result = density * densityScale;
 }
 
 void raymarchv2_float( float3 rayOrigin, float3 rayDirection, float numSteps, float stepSize,
@@ -65,7 +65,6 @@ void raymarchv2_float( float3 rayOrigin, float3 rayDirection, float numSteps, fl
 {
 	float density = 0;
 	float transmission = 0;
-	offset -= SHADERGRAPH_OBJECT_POSITION;
 	
 	for(int i =0; i< numSteps; i++){
 		rayOrigin += (rayDirection*stepSize);
@@ -86,7 +85,7 @@ void raymarchv3_float( float3 rayOrigin, float3 rayDirection, float numSteps, fl
 {
 	float density = 0;
 	float lightAccumulation = 0;
-	offset -= SHADERGRAPH_OBJECT_POSITION;
+	//offset -= SHADERGRAPH_OBJECT_POSITION;
 	
 	for(int i =0; i< numSteps; i++){
 		rayOrigin += (rayDirection*stepSize);

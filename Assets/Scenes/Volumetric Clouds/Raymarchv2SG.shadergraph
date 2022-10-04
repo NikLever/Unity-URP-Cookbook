@@ -74,6 +74,9 @@
         },
         {
             "m_Id": "cb63e488ac2b452b85022f1eff3018a4"
+        },
+        {
+            "m_Id": "a25a3e2bb6304601a49410b146ab0527"
         }
     ],
     "m_GroupDatas": [],
@@ -88,9 +91,9 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "87f66fa7a6b4436aa596fb16ae308f52"
+                    "m_Id": "a25a3e2bb6304601a49410b146ab0527"
                 },
-                "m_SlotId": 1
+                "m_SlotId": 0
             }
         },
         {
@@ -147,6 +150,20 @@
                     "m_Id": "b422fa89527f47f9b67bee5fb822bca0"
                 },
                 "m_SlotId": 7
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "a25a3e2bb6304601a49410b146ab0527"
+                },
+                "m_SlotId": 1
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "87f66fa7a6b4436aa596fb16ae308f52"
+                },
+                "m_SlotId": 1
             }
         },
         {
@@ -311,6 +328,29 @@
             "m_Id": "4621332a187046b18acab6f50b1f512a"
         }
     ]
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
+    "m_ObjectId": "05f498fa8d1b45ccab2779a6e7c5417a",
+    "m_Id": 0,
+    "m_DisplayName": "In",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "In",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -523,10 +563,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -829.9998779296875,
-            "y": -258.9999694824219,
-            "width": 121.99993896484375,
-            "height": 244.99996948242188
+            "x": -1006.5000610351563,
+            "y": -222.5,
+            "width": 122.0,
+            "height": 244.99998474121095
         }
     },
     "m_Slots": [
@@ -1094,6 +1134,55 @@
 }
 
 {
+    "m_SGVersion": 2,
+    "m_Type": "UnityEditor.ShaderGraph.TransformNode",
+    "m_ObjectId": "a25a3e2bb6304601a49410b146ab0527",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Transform",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -860.5000610351563,
+            "y": -222.5,
+            "width": 211.0,
+            "height": 156.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "05f498fa8d1b45ccab2779a6e7c5417a"
+        },
+        {
+            "m_Id": "c979120917324e13823976f8b3cbbc22"
+        }
+    ],
+    "synonyms": [
+        "world",
+        "tangent",
+        "object",
+        "view",
+        "screen",
+        "convert"
+    ],
+    "m_Precision": 0,
+    "m_PreviewExpanded": false,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Conversion": {
+        "from": 2,
+        "to": 0
+    },
+    "m_ConversionType": 0,
+    "m_Normalize": true
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.TangentMaterialSlot",
     "m_ObjectId": "a3b294ca750140a78975aa097cca279f",
@@ -1324,6 +1413,29 @@
     "m_StageCapability": 3,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
+    "m_ObjectId": "c979120917324e13823976f8b3cbbc22",
+    "m_Id": 1,
+    "m_DisplayName": "Out",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
     "m_Labels": []
 }
 
@@ -1695,7 +1807,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_Space": 2,
+    "m_Space": 0,
     "m_PositionSource": 0
 }
 
