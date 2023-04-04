@@ -75,8 +75,8 @@ public class DepthNormalsFeature : ScriptableRendererFeature
              context.DrawRenderers(renderingData.cullResults, ref drawSettings, ref filteringSettings);*/
             CommandBuffer cmd = CommandBufferPool.Get(profilerTag);
 
-            using (new ProfilingScope(cmd, new ProfilingSampler(profilerTag)))
-            {
+           // using (new ProfilingScope(cmd, new ProfilingSampler(profilerTag)))
+            //{
                 context.ExecuteCommandBuffer(cmd);
                 cmd.Clear();
 
@@ -98,7 +98,7 @@ public class DepthNormalsFeature : ScriptableRendererFeature
                     ref filteringSettings);
 
                 cmd.SetGlobalTexture("_CameraDepthNormalsTexture", Shader.PropertyToID(destinationHandle.name));
-            }
+            //}
 
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);
