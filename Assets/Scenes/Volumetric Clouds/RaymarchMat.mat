@@ -49,7 +49,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _darknessThreshold: 0.15
-    - _densityScale: 0.5
+    - _densityScale: 0.11
     - _lightAbsorb: 2.02
     - _lightStepSize: 0.06
     - _numLightSteps: 16
@@ -59,8 +59,8 @@ Material:
     m_Colors:
     - _Color: {r: 0.995283, g: 1, b: 0.99979883, a: 0}
     - _ShadowColor: {r: 0.52950335, g: 0.6103873, b: 0.6886792, a: 0}
-    - _Sphere: {r: 0, g: 0, b: 0, a: 0.5}
-    - _offset: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Sphere: {r: 0, g: 0, b: 0, a: 0.34}
+    - _offset: {r: 0.52, g: 0.5, b: 0.5, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3045474858049734558
 MonoBehaviour:
